@@ -1,38 +1,165 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  /* box-sizing: border-box; */
+  font-family: Arial, Helvetica, sans-serif;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  margin: 0;
+  padding: 30px;
+  color: white;
+  max-width: 100vw;
   min-height: 100vh;
+  background: #2C7873;
+  display: flex;
+  justify-content: center;
+}
+
+.App {
+  padding: 1rem;
+  width:80vw;
+  margin: 0 auto;
+  text-align: center;
+  background: #004445;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+}
+
+.list {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+h1 {
+  font-weight: 300;
   color: white;
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
 }
 
-.App-link {
-  color: #61dafb;
+.input-wrapper {
+  margin: 3.5rem;
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todos-wrapper {
+  margin-bottom: 2.5rem;
 }
+
+.todo-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 290px;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 300px;
+  padding: 0.8em;
+}
+
+@media screen and (min-width: 1025px ) {
+  .App {
+    padding: 1rem;
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    background: #004445;
+    border-radius: 10px;
+  }
+
+  input {
+    width: 400px;
+    padding: 0.8em;
+  }
+  .todo-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    margin-bottom: 10px;
+  }
+
+ 
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  width: 120px;
+  padding: 0.8em;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+
+input,
+button {
+  font-size: 1em;
+  appearance: none;
+  color: white;
+  background: transparent;
+  border: 1px solid #828691;
+}
+
+.add-button {
+  color: white;
+  border-left: none;
+}
+
+.add-button:hover {
+  color: #252525;
+  background: #6FB98F;
+}
+
+.delete-button {
+  color: #fe6a6a;
+}
+
+.delete-button:hover {
+  color: #252525;
+  background: #fe6a6a;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 0px;
+}
+
+li {
+  width: 450px;
+  padding: 0.85em;
+  text-align: left;
+  background: #494847;
+  letter-spacing: 0.02rem;
+  border-left: 5px solid #cf972e;
+}
+
+.empty {
+  font-size: 20px;
+  font-weight: 400;
+  color: #cf972e;
+  letter-spacing: 0.2rem;
+}
+
